@@ -1,1 +1,72 @@
-<!-- 主页面 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程序员表情包生成器 | Programmer Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code"></i> 程序员表情包生成器</h1>
+            <p>让你的代码review更有趣！🎭</p>
+        </header>
+
+        <div class="generator-section">
+            <div class="template-selector">
+                <h3>选择模板</h3>
+                <div class="template-grid" id="templateGrid">
+                    <!-- 模板会通过JavaScript动态加载 -->
+                </div>
+            </div>
+
+            <div class="text-input-section">
+                <h3>添加文字</h3>
+                <div class="input-group">
+                    <label for="topText">上方文字：</label>
+                    <input type="text" id="topText" placeholder="当产品经理说"就改一个颜色"">
+                </div>
+                <div class="input-group">
+                    <label for="bottomText">下方文字：</label>
+                    <input type="text" id="bottomText" placeholder="我内心：又要重构整个项目了">
+                </div>
+                <button id="generateBtn" class="generate-btn">
+                    <i class="fas fa-magic"></i> 生成表情包
+                </button>
+            </div>
+        </div>
+
+        <div class="preview-section">
+            <h3>预览</h3>
+            <div class="meme-preview" id="memePreview">
+                <canvas id="memeCanvas" width="500" height="500"></canvas>
+            </div>
+            <div class="action-buttons">
+                <button id="downloadBtn" class="action-btn">
+                    <i class="fas fa-download"></i> 下载图片
+                </button>
+                <button id="shareBtn" class="action-btn">
+                    <i class="fas fa-share"></i> 分享到微博
+                </button>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h3>热门表情包 🔥</h3>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- 示例表情包 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ by 程序员们 | <a href="https://github.com/yourusername/programmer-meme-generator" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+        </a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
